@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/34c05d4cd2.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Resume</title>
+</head>
+<body>
+    <header class="intro">
+        <nav class="page-nav">
+            <a href="#project-section" class="nav-item">PROJECTS</a>
+            <a href="#skill-section" class="nav-item">SKILLS</a>
+            <a href="#experience-section" class="nav-item">EXPERIENCE</a>
+            <a href="#contact-section" class="nav-item">CONTACT</a>
+            <a href="#social-section" class="nav-item">SOCIALS</a>
+        </nav>
+        <img class="profile-pic" src="images/profile.jpg" alt="My profile picture">
+        <h1>Hi, I'm Saptarshi</h1>
+        <h3>A Software Engineer</h3>
+    </header>
+    <section id="project-section" class="projects">
+        <h2 class="project-section">Projects</h2>
+        <div class="contents">
+            <div class="project-items chess-engine">
+                <img  class="project-pic" src="images/chess.jpg" alt="">
+                <p>Developed a chess engine by implementing AI algorithms such as Minimax and Alpha-Beta Pruning.
+                </p>
+                <p>Tech Stack: Python, Pygame module</p>
+                <p>Duration: 3 months</p>
+            </div>
+            <div class="project-items to-do">
+                <img class="project-pic" src="images/todo.png" alt="">
+                <p>Built a website to implement CRUD operations, allowing users to add, update
+                    or delete to-do lists.
+                </p>
+                <p>Tech Stack: Django, HTML and CSS, JavaScript</p>
+                <p>Duration: 2 months</p>
+            </div>
+            <div class="project-items news">
+                <img class="project-pic" src="images/news.png" alt="">
+                <p>Built a web app that aggregates news content by fetching data
+                    from an API and displays the same in a proper format.
+                </p>
+                <p>Tech Stack: Python, HTML and CSS, NewsAPI</p>
+                <p>Duration: 1 month</p>
+            </div>
+        </div>
+    </section>
+    <section id="skill-section" class="skills">
+        <h2>Skills</h2>
+        <div class="skill-container">
+            <div class="skill-set-1">
+                <div class="skill-item1 skill-item">
+                    <span>HTML5</span>
+                    <div class="progress-bar">
+                        <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
+                    </div>
+                </div>
+                <div class="skill-item2 skill-item">
+                    <span>CSS3</span>
+                    <div class="progress-bar">
+                        <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
+                    </div>
+                </div>
+                <div class="skill-item3 skill-item">
+                    <span>Bootstrap</span>
+                    <div class="progress-bar">
+                        <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="skill-set-2">
+                <div class="skill-item4 skill-item">
+                    <span>Python</span>
+                    <div class="progress-bar">
+                        <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
+                    </div>
+                </div>
+                <div class="skill-item5 skill-item">
+                    <span>JavaScript</span>
+                    <div class="progress-bar">
+                        <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
+                    </div>
+                </div>
+                <div class="skill-item6 skill-item">
+                    <span>Java</span>
+                    <div class="progress-bar">
+                        <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+    <section id="experience-section" class="experience">
+        <h2>Experience</h2>
+        <div class="exp-content">
+            <div class="exp-1">
+                <figure>
+                    <img class="exp-img" src="images/placement.jpg" alt="">
+                    <figcaption>Placement Coordinator</figcaption>
+                </figure>
+                <ul class="exp-desc">
+                    <li>Managed phones, email, and chat to assist students in applying to companies.</li>
+                    <li>Handled student queries regarding companies and their recruitment processes.</li>
+                    <li>Collaborated in creating and managing of a database of student information provided
+                        to companies that arrive for recruitment.
+                    </li>
+                </ul>
+            </div>
+            <div class="exp-2">
+                <figure>
+                    <img class="exp-img" src="images/finance.jpg" alt="">
+                    <figcaption>Financial Manager</figcaption>
+                </figure>
+                <ul class="exp-desc">
+                    <li>Managed phones, email, and chat to assist students with queries regarding 
+                        support from college for startup funding and information about events.
+                    </li>
+                    <li>Helped colleagues and staff in managing events hosted by e-cell and ensured
+                        smooth execution of day-to-day activities.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="contact-section" class="contact">
+        <div class="contact-details">
+            <h2>Get In Touch!</h2>
+            <form action="">
+                <p>I'd love to get in touch and learn more about opportunities. So, send me a message and 
+                    I'll reply as fast as I can.</p><hr>
+                <label class="form-title">Your name<br>
+                <div class="name-field">
+                    <input class="name-item" type="text" name="first-name" placeholder="John" required>
+                    <input class="name-item" type="text" name="last-name" placeholder="Doe" required></label>
+                </div>
+                <label class="form-title">Email:<br>
+                <input class="form-field" type="email" name="email" placeholder="abc@example.com" required></label><br>
+                <label class="form-title">Phone:<br>
+                <input class="form-field" type="number" name="phone" placeholder="##-##########"></label><br>
+                <label class="form-title">Your message:<br>
+                    <textarea name="message" cols="55" rows="8"></textarea>
+                </label><br>
+                <div class="button-container">
+                    <button class="form-submit" type="submit">SEND</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer id="social-section" class="socials">
+        <p style="text-align: center;">Reach me out on my socials!</p>
+        <div class="links">
+            <a href="https://in.linkedin.com/in/saptarshi-das-2974131a6" target="_blank">
+            <i class="fa fa-2x fa-linkedin-square" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-2x fa-facebook-square" aria-hidden="true"></i></a>
+            <a href="https://github.com/saptarshi-vesit" target="_blank"><i class="fa fa-2x fa-github" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-2x fa-instagram" aria-hidden="true"></i></a>
+        </div>
+
+    </footer>
+</body>
+</html>
