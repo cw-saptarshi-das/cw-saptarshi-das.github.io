@@ -1,0 +1,154 @@
+/*Page styles*/
+
+body {
+    background-color: #433e54;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+.form-container {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 25vw;
+    padding: 25px;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;  
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+label {
+    color: gray;
+}
+
+button {
+    align-self: center;
+    border-radius: 2px;
+    background-color: #236bde;
+    color: white;
+    height: 40px;
+    width: 100%;
+    border: 1px;
+}
+
+.submit-button:disabled {
+    opacity: 0.5;
+}
+
+input {
+    width: 25vw;
+    height: 5vh;
+    border-radius: 2px;
+    border: 1px solid black;
+    outline: none;
+}
+
+/*Form Validation Styles*/
+
+.username-error,
+.email-error,
+.password-error,
+.confirm-password-error {
+    color: red;
+    font-style: italic;
+}
+
+.error-highlight {
+    border: 2px solid red;
+}
+
+.valid-highlight {
+    border: 2px solid green;
+}
+
+.fa-solid{
+    cursor: pointer;
+    color: grey;
+}
+
+.pop-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    height: 45vh;
+    border-radius: 5px;
+    width: 35%;
+    background-color: #f4ffc7;
+}
+
+.close-pop-up {
+    width: 50%;
+}
+
+.display-hidden {
+    display: none;
+}
+
+.password-container {
+    position: relative;
+    margin-bottom: 2vh;
+}
+
+.confirm-password-container {
+    position: relative; 
+    margin-bottom: 5vh;
+}
+
+.i-class {
+    position: absolute;
+    top: 30%;
+    right: 4%;
+    /* transform: translateY(-50%);  */
+}
+
+/* Responsive design */
+
+@media all and (max-width: 1000px) {
+    .form-container {
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        padding: 25px;
+        flex-direction: column;
+    }
+
+    input {
+        width: 80vw;
+        height: 5vh;
+        border-radius: 5px;
+        border: 3px solid black;
+        outline: none;
+    }
+
+    label {
+        color: gray;
+        font-size: 2.5vh;
+    }
+
+    .submit-button {
+        font-size: 2.5vh;
+    }
+}
+
