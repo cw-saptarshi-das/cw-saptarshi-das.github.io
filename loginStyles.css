@@ -54,7 +54,7 @@ input {
     width: 25vw;
     height: 5vh;
     border-radius: 2px;
-    border: 1px solid black;
+    border: 1.5px solid black;
     outline: none;
 }
 
@@ -87,7 +87,7 @@ input {
     justify-content: center;
     flex-direction: column;
     position: absolute;
-    height: 45vh;
+    height: 45%;
     border-radius: 5px;
     width: 35%;
     background-color: #f4ffc7;
@@ -115,7 +115,6 @@ input {
     position: absolute;
     top: 30%;
     right: 4%;
-    /* transform: translateY(-50%);  */
 }
 
 /* Responsive design */
@@ -138,7 +137,7 @@ input {
         width: 80vw;
         height: 5vh;
         border-radius: 5px;
-        border: 3px solid black;
+        border: 2.5px solid black;
         outline: none;
     }
 
@@ -150,5 +149,27 @@ input {
     .submit-button {
         font-size: 2.5vh;
     }
+
+    .pop-up {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        height: 25vh;
+        border-radius: 5px;
+        width: 70vw;
+        background-color: #f4ffc7;
+    }
+
+    .display-hidden {
+        display: none;
+    }
+
+    .pop-up-header {
+        font-size: 5vw;
+        margin-bottom: 20px;
+    }
+    
 }
 

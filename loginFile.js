@@ -47,7 +47,7 @@ const formValidation = (id) => {
         input.classList.remove('valid-highlight');
         errorMessage.classList.add(`${id}-error`);
         errorMessage.innerText = `${messages[id]}`;
-        if (input.parentElement?.parentElement)
+        if (input.parentElement != document.querySelector('.form'))
             input.parentElement.insertAdjacentElement('afterend', errorMessage);
         else input.insertAdjacentElement('afterend', errorMessage);
     } else {
