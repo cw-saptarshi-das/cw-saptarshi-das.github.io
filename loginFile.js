@@ -16,7 +16,6 @@ const validForm = {
     'password': true, 
     'confirm-password': true,
 };
-let invalidCount = 4;
 
 const conditionCheck = {
     'username': function(input) {
@@ -51,20 +50,19 @@ const formValidation = (id) => {
             input.parentElement.insertAdjacentElement('afterend', errorMessage);
         else input.insertAdjacentElement('afterend', errorMessage);
     } else {
-        errorMessage.classList.remove(`${id}-error`);
         input.classList.remove('error-highlight');
         input.classList.add("valid-highlight");
     }
 };
 
 const checkFormValidity = () => {
+    let invalidCount = 4;
     ids.forEach((id) => {
         validForm[id] = !(document.querySelector(`.${id}-error`) || !document.querySelector(`#${id}`).value)
-    });
+    }); 
 
-    let validEntries = Object.keys(validForm);
     let result = 0;
-    validEntries.forEach((entry) => {
+    Object.keys(validForm).forEach((entry) => {
         result += validForm[entry];
     })
     submitButton.disabled = !(result === invalidCount);
@@ -85,22 +83,16 @@ submitButton.addEventListener('click', (event) => {
 
 closeButton.addEventListener('click', () => {
     popUpBox.classList.add('display-hidden');
+    location.reload();  
 });
 
-document.querySelector("#show-password").addEventListener("click", () => {
-    const passwordInput = document.querySelector("#password");
-    const eyeIcon = document.querySelector("#show-password");
+["confirm-", ""].forEach( (prefix) => {
+    document.querySelector(`#show-${prefix}password`).addEventListener("click", () => {
+    const passwordInput = document.querySelector(`#${prefix}password`);
+    const eyeIcon = document.querySelector(`#show-${prefix}password`);
     eyeIcon.classList.toggle("fa-eye");
     eyeIcon.classList.toggle("fa-eye-slash");
     const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
     passwordInput.setAttribute("type", type);
-});
-
-document.querySelector("#show-confirm-password").addEventListener("click", () => {
-    const passwordInput = document.querySelector("#confirm-password");
-    const eyeIcon = document.querySelector("#show-confirm-password");
-    eyeIcon.classList.toggle("fa-eye");
-    eyeIcon.classList.toggle("fa-eye-slash");
-    const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-    passwordInput.setAttribute("type", type);
-});
+    });
+})
